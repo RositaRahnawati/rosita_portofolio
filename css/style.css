@@ -1,0 +1,561 @@
+
+/* =================================
+   1. PENGATURAN DASAR WEBSITE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1d2939;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   2. HEADER / NAVBAR
+================================= */
+
+#rosita_header {
+    width: 100%;
+    min-height: 65px;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.rosita_logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #172b4d;
+}
+
+.rosita_logo span {
+    color: #1765c5;
+    margin-right: 8px;
+    font-size: 25px;
+}
+
+.rosita_logo b {
+    color: #1765c5;
+}
+
+.rosita_menu {
+    display: flex;
+    gap: 30px;
+}
+
+.rosita_menu a {
+    text-decoration: none;
+    color: #263445;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rosita_menu a:hover {
+    color: #1765c5;
+}
+
+
+/* =================================
+   3. HERO / HALAMAN UTAMA
+================================= */
+
+#rosita_home {
+    min-height: 420px;
+    padding: 35px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(120deg, #edf4ff, #c7ddff);
+}
+
+.rosita_hero_text {
+    flex: 1;
+}
+
+.rosita_hero_text h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #263445;
+}
+
+.rosita_hero_text h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    color: #172b4d;
+}
+
+.rosita_hero_text h2 {
+    font-size: 18px;
+    color: #52647a;
+    margin-bottom: 15px;
+}
+
+.rosita_hero_text p {
+    max-width: 480px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.rosita_hero_button {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.rosita_btn_primary,
+.rosita_btn_secondary {
+    padding: 9px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rosita_btn_primary {
+    background-color: #1765c5;
+    color: white;
+}
+
+.rosita_btn_primary:hover {
+    background-color: #104b96;
+}
+
+.rosita_btn_secondary {
+    border: 1px solid #1765c5;
+    color: #1765c5;
+    background-color: white;
+}
+
+.rosita_btn_secondary:hover {
+    background-color: #1765c5;
+    color: white;
+}
+
+.rosita_hero_image {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rosita_hero_image img {
+    width: 100%;
+    max-width: 800px;
+    height: 380px;
+    object-fit: contain;
+}
+
+
+/* =================================
+   4. ABOUT ME
+================================= */
+
+#rosita_about {
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.rosita_about_text {
+    flex: 1;
+}
+
+#rosita_about h2,
+#rosita_skills h2,
+#rosita_projects h2 {
+    font-size: 23px;
+    color: #172b4d;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+#rosita_about h2::after,
+#rosita_skills h2::after,
+#rosita_projects h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #1765c5;
+    margin-top: 5px;
+}
+
+.rosita_about_text p {
+    max-width: 550px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.rosita_about_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: #52647a;
+}
+
+.rosita_profile img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #eaf0fa;
+}
+
+
+/* =================================
+   5. SKILLS
+================================= */
+
+#rosita_skills {
+    padding: 35px 7%;
+    background-color: #f1f3f7;
+    min-height: 300px;
+}
+
+/* JUDUL SKILLS */
+
+#rosita_skills h2 {
+    font-size: 23px;
+    color: #1765c5;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+#rosita_skills h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #1765c5;
+    margin-top: 5px;
+}
+
+/* GRID SKILLS */
+
+.rosita_skill_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* KOTAK SKILLS */
+
+.rosita_skill_item {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 10px;
+    padding: 18px 15px;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #263445;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+/* LOGO SKILLS */
+
+.rosita_skill_item::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* HTML5 */
+
+.rosita_skill_item:nth-child(1)::before {
+    background-image: url("https://cdn.simpleicons.org/html5/E34F26");
+}
+
+/* CSS3 */
+.rosita_skill_item:nth-child(2)::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg");
+}
+
+/* MICROSOFT OFFICE */
+.rosita_skill_item:nth-child(3)::before {
+    background-image: url("https://icons.iconarchive.com/icons/simpleicons-team/simple/128/microsoft-office-icon.png");
+}
+
+/* PYTHON */
+
+.rosita_skill_item:nth-child(4)::before {
+    background-image: url("https://cdn.simpleicons.org/python/3776AB");
+}
+
+/* MYSQL */
+
+.rosita_skill_item:nth-child(5)::before {
+    background-image: url("https://cdn.simpleicons.org/mysql/4479A1");
+}
+
+/* CANVA */
+.rosita_skill_item:nth-child(6)::before {
+    background-image: url("https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* FIGMA */
+
+.rosita_skill_item:nth-child(7)::before {
+    background-image: url("https://cdn.simpleicons.org/figma/F24E1E");
+}
+
+/* DESKRIPSI SKILLS */
+
+.rosita_skill_item::after {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 10px;
+    font-weight: normal;
+    color: #7b8794;
+}
+
+.rosita_skill_item:nth-child(1)::after {
+    content: "Web page structure";
+}
+
+.rosita_skill_item:nth-child(2)::after {
+    content: "Website styling";
+}
+
+.rosita_skill_item:nth-child(3)::after {
+    content: "Document processing";
+}
+
+.rosita_skill_item:nth-child(4)::after {
+    content: "Programming language";
+}
+
+.rosita_skill_item:nth-child(5)::after {
+    content: "Database management";
+}
+
+.rosita_skill_item:nth-child(6)::after {
+    content: "Graphic design";
+}
+
+.rosita_skill_item:nth-child(7)::after {
+    content: "UI/UX design";
+}
+
+/* EFEK HOVER */
+
+.rosita_skill_item:hover {
+    transform: translateY(-4px);
+    border-color: #1765c5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* =================================
+   6. PROJECTS
+================================= */
+
+#rosita_projects {
+    padding: 0 7% 30px;
+}
+
+.rosita_project_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.rosita_project_card {
+    background-color: #ffffff;
+    border: 1px solid #dfe5ed;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.rosita_project_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.rosita_project_card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.rosita_project_info {
+    padding: 10px;
+}
+
+.rosita_project_info h3 {
+    font-size: 14px;
+    color: #172b4d;
+}
+
+.rosita_project_info p {
+    font-size: 12px;
+    color: #52647a;
+    margin-bottom: 8px;
+}
+
+.rosita_project_info a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1765c5;
+}
+
+
+/* =================================
+   7. FOOTER
+================================= */
+
+#rosita_footer {
+    padding: 20px 3%;
+    background-color: #172b4d;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rosita_footer_info h3 {
+    font-size: 17px;
+}
+
+.rosita_footer_info p {
+    font-size: 11px;
+    color: #d4dfed;
+}
+
+.rosita_footer_contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 11px;
+}
+
+.rosita_copyright {
+    width: 100%;
+    border-top: 1px solid #52647a;
+    padding-top: 10px;
+    font-size: 11px;
+    color: #d4dfed;
+}
+
+
+/* =================================
+   8. RESPONSIVE / TAMPILAN HP
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    #rosita_header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rosita_menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #rosita_home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rosita_hero_text h1 {
+        font-size: 32px;
+    }
+
+    .rosita_hero_button {
+        justify-content: center;
+    }
+
+    .rosita_hero_image img {
+        max-width: 100%;
+    }
+
+    #rosita_about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .rosita_about_info {
+        justify-content: center;
+    }
+
+    .rosita_skill_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rosita_project_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #rosita_footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rosita_footer_contact {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .rosita_project_list {
+        grid-template-columns: 1fr;
+    }
+
+    .rosita_hero_text h1 {
+        font-size: 28px;
+    }
+}
